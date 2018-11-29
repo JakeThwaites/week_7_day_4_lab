@@ -4,6 +4,8 @@ const MunroView = function(container, munro) {
 };
 
 MunroView.prototype.render = function () {
+  this.munrosContainer.innerHTML = '';
+
   const munroContainer = document.createElement('div');
   munroContainer.classList.add('scottish-munro');
 
@@ -39,8 +41,8 @@ MunroView.prototype.populateList = function (list) {
   const munroListItem1 = document.createElement('li');
   const munroListItem2 = document.createElement('li');
 
-  munroListItem1.textContent = munroHeight;
-  munroListItem2.textContent = munroMeaning;
+  munroListItem1.textContent = `Height: ${munroHeight}`;
+  munroListItem2.textContent = `Meaning: ${munroMeaning}`;
 
   list.appendChild(munroListItem1);
   list.appendChild(munroListItem2);
